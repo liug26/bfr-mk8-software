@@ -1,0 +1,3 @@
+{
+    "files": ["gui/numdisplay/LambdaDisplay.py","gui/dials/DialWidget.py","code_profiler.py","gui/datamonitor/DataMonitor.py","resources.py","gui/misc/ToggleDataMonitorLabel.py","gui/numdisplay/NumberDisplayWidget.py","gui/gear/GearWidget.py","gui/dials/AnalogGaugeWidget.py","gui/misc/ExitLabel.py","gui/datamonitor/SimpleDataTable.py","main.py","gui/main.ui","gui/numdisplay/BorderBackgroundWidget.py","gui/errorbox/ErrorBox.py","gui/datamonitor/DataTable.py","resources.qrc","gui/datamonitor/LenCapText.py","gui/dials/RadialGradientEffect.py","gui/datamonitor/DataLabel.py","receive.py","globalfonts.py","gui/datamonitor/data_monitor.ui","gui/misc/ChromiumLabel.py"]
+}

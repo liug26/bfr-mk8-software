@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BFRDashboard</class>
+ <widget class="QMainWindow" name="BFRDashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Garamond</family>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>BlankCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;font-family:Garamond;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Garamond</family>
+    </font>
+   </property>
+   <widget class="SpeedDial" name="SpeedDial" native="true">
+    <property name="geometry">
+     <rect>
+      <x>848</x>
+      <y>420</y>
+      <width>350</width>
+      <height>350</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="RPMDial" name="RPMDial" native="true">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>420</y>
+      <width>350</width>
+      <height>350</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RPMLabel">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>665</y>
+      <width>110</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #CEF4FF;background-color:rgba(0,0,0,0);font-size:40px;</string>
+    </property>
+    <property name="text">
+     <string>kRPM</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="SpeedLabel">
+    <property name="geometry">
+     <rect>
+      <x>987</x>
+      <y>665</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #CEF4FF;background-color:rgba(0,0,0,0);font-size:35px</string>
+    </property>
+    <property name="text">
+     <string>MPH</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="GearWidget" name="Gear" native="true">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>380</y>
+      <width>280</width>
+      <height>310</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="BorderBackgroundWidget" name="LeftNumBox" native="true">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>40</y>
+      <width>240</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <widget class="CoolantDisplay" name="CoolantTemp" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>240</width>
+       <height>165</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="LogDisplay" name="LogLabel" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>165</y>
+       <width>240</width>
+       <height>165</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white; font-size : 80pt; background-color : rgba(0, 0, 0, 0)</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="BorderBackgroundWidget" name="RightNumBox" native="true">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>40</y>
+      <width>240</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <widget class="BrakeDisplay" name="Brake" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>240</width>
+       <height>165</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="BatteryDisplay" name="Battery" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>165</y>
+       <width>240</width>
+       <height>165</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="CANConnectionLabel">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>10</y>
+      <width>270</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; font-size : 25px; background-color : rgba(0, 0, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="CANStatusLabel">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>45</y>
+      <width>190</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; font-size : 25px; background-color : rgba(0, 0, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string>CAN Status</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="BFRIcon">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>200</width>
+      <height>150</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../resources.qrc">:/res/bfr_icon</pixmap>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="ExitLabel" name="ExitLabel">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>0</y>
+      <width>250</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;font-size:30px;background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FPSLabel">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>80</y>
+      <width>130</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; font-size : 25px; background-color : rgba(0, 0, 0, 0)</string>
+    </property>
+    <property name="text">
+     <string>FPS: N</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="ErrorBox" name="ErrorBox">
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>160</y>
+      <width>160</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white; font-size : 25px; background-color : rgba(40,40,40,255);</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="ToggleDataMonitorLabel" name="ToggleDataMonitorLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;font-size:30px;background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+    </property>
+   </widget>
+   <widget class="DataMonitor" name="DataMonitor" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>1220</width>
+      <height>660</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,0);</string>
+    </property>
+   </widget>
+   <widget class="LambdaDisplay" name="Lambda" native="true">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>50</y>
+      <width>240</width>
+      <height>260</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="ChromiumLabel" name="ChromiumLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>240</width>
+      <height>240</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;font-size:30px;background-color: rgba(0,0,0,0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>LeftNumBox</zorder>
+   <zorder>SpeedDial</zorder>
+   <zorder>RPMDial</zorder>
+   <zorder>RPMLabel</zorder>
+   <zorder>SpeedLabel</zorder>
+   <zorder>Gear</zorder>
+   <zorder>RightNumBox</zorder>
+   <zorder>CANConnectionLabel</zorder>
+   <zorder>CANStatusLabel</zorder>
+   <zorder>BFRIcon</zorder>
+   <zorder>ExitLabel</zorder>
+   <zorder>ErrorBox</zorder>
+   <zorder>ToggleDataMonitorLabel</zorder>
+   <zorder>FPSLabel</zorder>
+   <zorder>Lambda</zorder>
+   <zorder>DataMonitor</zorder>
+   <zorder>ChromiumLabel</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>36</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GearWidget</class>
+   <extends>QWidget</extends>
+   <header>gui/gear/GearWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BorderBackgroundWidget</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/BorderBackgroundWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CoolantDisplay</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/NumberDisplayWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BatteryDisplay</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/NumberDisplayWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>BrakeDisplay</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/NumberDisplayWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ExitLabel</class>
+   <extends>QLabel</extends>
+   <header>gui/misc/ExitLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ErrorBox</class>
+   <extends>QLabel</extends>
+   <header>gui/errorbox/ErrorBox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>DataMonitor</class>
+   <extends>QWidget</extends>
+   <header>gui/datamonitor/DataMonitor.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ToggleDataMonitorLabel</class>
+   <extends>QLabel</extends>
+   <header>gui/misc/ToggleDataMonitorLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RPMDial</class>
+   <extends>QWidget</extends>
+   <header>gui/dials/DialWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SpeedDial</class>
+   <extends>QWidget</extends>
+   <header>gui/dials/DialWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LambdaDisplay</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/LambdaDisplay.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LogDisplay</class>
+   <extends>QWidget</extends>
+   <header>gui/numdisplay/NumberDisplayWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChromiumLabel</class>
+   <extends>QLabel</extends>
+   <header>gui/misc/ChromiumLabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

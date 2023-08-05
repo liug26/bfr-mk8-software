@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/res">
+        <file alias="battery">gui/resources/battery.png</file>
+        <file alias="bfr_icon">gui/resources/bfr_icon.png</file>
+        <file alias="brake">gui/resources/brake.png</file>
+        <file alias="coolant">gui/resources/coolant.png</file>
+        <file alias="exhaust">gui/resources/exhaust.png</file>
+        <file alias="main_ui">gui/main.ui</file>
+        <file alias="ubuntu">gui/resources/Ubuntu-Regular.ttf</file>
+        <file alias="data_monitor_ui">gui/datamonitor/data_monitor.ui</file>
+        <file alias="fuel_pressure">gui/resources/fuel_pressure.png</file>
+        <file alias="log">gui/resources/log.png</file>
+    </qresource>
+</RCC>
