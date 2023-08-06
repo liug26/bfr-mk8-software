@@ -1,4 +1,14 @@
-# Bruin Formula Racing Dashboard
+# BFR Mk8 Dashboard
+PyQt5-based GUI with and endlessly looping thread reading CAN messages that reflect on the screen
+
+### Required Libraries
+To install Python 3.7 on a Ubuntu Linux Machine:
+```
+sudo apt-get update
+sudo apt-get install python3.7
+```
+
+
  
 ### How to set up on Raspberry Pi
 1. Connect Raspberry Pi and a screen with resolution around 1280x720 pixels to power supply.
