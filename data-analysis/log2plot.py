@@ -1,5 +1,4 @@
 import argparse
-import data_parser
 import plotly.graph_objects as go
 import sys
 
@@ -9,7 +8,8 @@ print('Parsing arguments:', sys.argv)
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--plot', nargs='+', required=True, help="space-separated data types")
 parser.add_argument('-i', '--input', required=True, help="input csv log file")
-parser.add_argument('-o', '--output', required=True, default='tempplot.html', help="output html file")
+parser.add_argument('-v', '--parser', required=False, default='data_parser', help="data parser module name")
+parser.add_argument('-o', '--output', required=False, default='tempplot.html', help="output html file")
 parser.add_argument('-t', '--title', required=False, default='Plot Title', help="graph title")
 parser.add_argument('-x', '--xaxis_title', required=False, default='Time (s)', help="x axis title")
 parser.add_argument('-y', '--yaxis_title', required=False, default='Y Axis Title', help="y axis title")
@@ -17,8 +17,11 @@ parser.add_argument('-l', '--legend_title', required=False, default='Legend', he
 parser.add_argument('--font_family', required=False, default='Courier New, monospace', help="font family")
 parser.add_argument('--font_size', required=False, type=int, default=18, help="font size")
 parser.add_argument('--font_color', required=False, default='RebeccaPurple', help="font color")
-
 args = parser.parse_args()
+
+
+# dynamically import data parser module
+data_parser = __import__(args.parser)
 
 # Reference
 # https://plotly.com/python/figure-labels/
