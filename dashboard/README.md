@@ -24,8 +24,7 @@ Then, install PyQt5 by `pip install PyQt5`
 3. In globalfonts.py, tune SCALE and DIAL_SCALE to make the font size look pleasant. This may be necessary since fonts look slightly different on Raspberry Pi's own OS
 4. In terminal, run `python main.py`. The dashboard should display.
 #### Post-deployment
-1. To hide Raspberry Pi's menu bar, enter in terminal `sudo nano /home/[name of your pi]/config/lxsession/LXDE-pi/autostart`  
-   and comment out the line: `@lxpanel --profile LXDE` by adding a '#' at front  
+1. To hide Raspberry Pi's menu bar, enter in terminal `sudo nano /home/[name of your pi]/config/lxsession/LXDE-pi/autostart` and comment out the line: `@lxpanel --profile LXDE` by adding a '#' at front  
    After the menu bar is hidden, to open a terminal press Ctrl+Alt+T
-10. To launch on boot, follow [these instructions](https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup#method-2-autostart)
-11. To make updating versions from git easier, move gitpull.sh to the directory one level up. Run `chmod a+rx gitpull.sh` to allow the shell script to make modifications, and then run `~/gitpull.sh` to update from this repo
+2. To launch main.py on boot, follow [these instructions](https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup#method-2-autostart) to have the system call `python main.py`
+3. To ease version updating, move gitpull.sh to the directory one level up. Run `chmod a+rx gitpull.sh` and then `./gitpull.sh` to update from this repository (As the original repository is archived in this repository, you may need to change GIT_HTTPS in gitpull.sh accordingly)
