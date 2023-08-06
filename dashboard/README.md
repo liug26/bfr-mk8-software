@@ -10,7 +10,7 @@ sudo apt-get install python3.7
 Then, install PyQt5 by `pip install PyQt5`
 
 ### Code Structure
-- __pycache__/: Python cache, you may ignore these
+- _pycache_/: Python cache, you may ignore these
 - gui/: all the sub-components in the dashboard's GUI
   - datamonitor/: The data monitor widget, hidden by default, and lists in detail all the data types
   - dials/: The dial widget, instantiated as the speed, RPM, and lambda dial
